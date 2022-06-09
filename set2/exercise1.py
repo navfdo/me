@@ -14,14 +14,14 @@ import platform
 
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
-
+# This defines the set of some_words
 some_words = ["what", "does", "this", "line", "do", "?"]
-
+# I think it will print all the words within the list "some_words"
 for word in some_words:
-    print(word)
-
+    print(word)  # It printed all the words in the list
+# It will print every item in the list
 for x in some_words:
-    print(x)
+    print(x)  # Printed every item in the list
 
 print(some_words)
 
