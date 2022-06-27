@@ -22,9 +22,10 @@ for word in some_words:
 # It will print every item in the list
 for x in some_words:
     print(x)  # Printed every item in the list
-
-print(some_words)
-
+# I think it will print the list itself and not each item individually
+print(some_words)  # Printed the list
+# I think if the list contains more than 3 items then it will print "some_words contains
+# more than 3 words"
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
 
