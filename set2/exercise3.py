@@ -102,7 +102,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    square = []
+    for i in range(10):
+        square.append("*")
+    return square * 10
 
 
 def loops_3():
