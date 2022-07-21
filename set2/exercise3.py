@@ -54,7 +54,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    list1 = []
+    for i in range(10):
+        list1.append("*")
+
+    return list1
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -88,7 +92,17 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    starfield = []
+
+    for i in range(10):
+
+        row = []
+        for j in range(10):
+            row.append("*")
+
+        starfield.append(row)
+
+    return starfield
 
 
 def loops_3():
@@ -112,7 +126,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    block = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(i)
+        block.append(row)
+    return block
+    
+            
 
 
 def loops_4():
@@ -132,7 +154,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    block = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(j)
+        block.append(row)
+    return block
 
 
 def loops_5():
@@ -162,7 +190,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    block = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append(f"(i{i}, j{j})")
+        block.append(row)
+    return block 
 
 
 def loops_6():
@@ -185,8 +219,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge = []
 
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(j)
+        
+        wedge.append(row)
+    
+    return wedge
 
 def loops_7():
     """Make a pyramid.
@@ -209,7 +251,24 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    block = []
+    space_num = 4
+    star_num = 1
+    
+    for i in range(5):
+        row = []
+        
+        for j in range(9):
+            if j < space_num or j >= space_num + star_num:
+                row.append(" ")
+            else:
+                row.append("*")
+        block.append(row)
+        space_num = space_num - 1
+        star_num = star_num + 2
+
+    return block
+
 
 
 def little_printer(some_kind_of_list, exercise_name):
