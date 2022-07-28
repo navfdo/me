@@ -178,6 +178,13 @@ def pet_filter(letter="a") -> List:
     ]
     # fmt: on
     filtered = []
+    list = pets
+    chars = [letter]
+    selected_types = []
+    for letter in list:
+        if all([c in letter for c in chars]):
+            selected_types.append(letter)
+        filtered = selected_types
 
     return filtered
 
