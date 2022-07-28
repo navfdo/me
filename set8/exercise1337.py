@@ -109,7 +109,7 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     import pandas as pd 
     list = input_list
     count = pd.Series(list).value_counts()
-    return (count.get(search_for_this))
+    return (count.get(search_for_this, 0))
 
 
 def fizz_buzz() -> List:
@@ -131,9 +131,15 @@ def fizz_buzz() -> List:
          'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
-    for i in range(100):
-        fizz_buzz_list.append(i)
-        
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print ('FizzBuzz')
+        elif i % 3 == 0:
+            print ('Fizz')
+        elif i % 5 == 0:
+            print ('Buzz')
+        else:
+            print (str(i))
 
     return fizz_buzz_list
 
