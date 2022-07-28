@@ -5,13 +5,14 @@ This is the same as the setly exercises, fill in the functions,
 and test them to see if they work.
 You have 2 hours.
 """
+from itertools import count
 import json
 import os
 import random
 import string
 import time
 import requests
-from typing import Dict, List
+from typing import Dict, ItemsView, List
 
 
 def give_me_five() -> int:
@@ -24,38 +25,59 @@ def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    return None
+    password = str()
+    return "Yoguystgisisapasswords"
+
 
 
 def list_please() -> list:
     """Returns a list, you can put anything in the list."""
-    return None
+    list = []
+       
+    for i in range(10):
+        list.append("*")
+
+    return list
+
 
 
 def int_list_please() -> list:
     """Returns a list of integers, any integers are fine."""
-    return None
+    numbers = []
+
+    for i in range(5):
+        numbers.append(i)
+
+    return numbers
 
 
 def string_list_please() -> list:
     """Returns a list of strings, any string are fine."""
-    return None
+    stringlist = ["bruh", "poop", "food"]
+    return stringlist
+
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return None
+    dictionary = {}
+    return dictionary
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
+    if some_number == 5: 
+        return True
+    else:
+        return False
     well_is_it = None
     return well_is_it
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return None
+    number = some_number - 5
+    return number
 
 
 def greet(name="Towering Timmy") -> str:
@@ -64,7 +86,8 @@ def greet(name="Towering Timmy") -> str:
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return None
+    greeting = (f"Well hello, {name}")
+    return greeting
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -72,9 +95,11 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
+    import pandas as pd 
+    list = input_list
+    count = pd.Series(list).value_counts()
+    return (count.get(1))
 
-    return count
 
 
 def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
