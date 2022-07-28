@@ -106,9 +106,10 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
-
-    return count
+    import pandas as pd 
+    list = input_list
+    count = pd.Series(list).value_counts()
+    return (count.get(search_for_this))
 
 
 def fizz_buzz() -> List:
@@ -130,7 +131,9 @@ def fizz_buzz() -> List:
          'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
-    # your code here
+    for i in range(100):
+        fizz_buzz_list.append(i)
+        
 
     return fizz_buzz_list
 
