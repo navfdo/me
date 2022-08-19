@@ -9,3 +9,11 @@ TODO: Reflect on what you learned this week and what is still unclear.
 # Exercise 1
 
 # 5:10pm - wasn't sure what the "for" loop did so I googled it and learnt that it executes a set of statements, once for each item
+
+# Exercise 2
+
+# Was pretty self-explanatory
+
+# Exercise 3
+
+# This one was tough, but once Louis helped me understand how to use loops the same idea applied to pretty much every question

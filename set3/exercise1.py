@@ -17,7 +17,13 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    numlist = []
+    current_entry = start
+
+    while current_entry < stop:
+        numlist.append(current_entry)
+        current_entry += step
+    return numlist
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +34,13 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    output_list = []
+    current_entry = start
+
+    while current_entry < stop:
+        output_list.append(current_entry)
+        current_entry += 2
+    return output_list
 
 
 def stubborn_asker(low, high):
@@ -39,7 +51,13 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    heh = int(input("Give me a number"))
+    # if heh > low or heh < high:
+    #     return heh
+    # else
+    while heh < low or heh > high:
+        heh = int(input("Give me a number"))
+    return heh
 
 
 def not_number_rejector(message):
